@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Label Detection Results</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+		<h2>Labels List</h2>
+		<table class="table">
+			<tr>
+				<th>Description</th>
+				<th>Score</th>
+				<th>Topicality</th>
+			</tr>
+			<tr th:each="label:${labels}">
+				<td th:text="${label.description}"></td>
+				<td th:text="${label.score}"></td>
+				<td th:text="${label.topicality}"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
